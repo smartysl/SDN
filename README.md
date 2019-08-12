@@ -5,7 +5,7 @@ ryu+mininet实现最短路径规划
 topo主要应用了随机图算法，随机生成Link  
 再使用bfs筛选，防止交换机链接成环造成广播风暴  
 `关键代码如下`：<br>
-···
+```
 def bfs(self,graph):
 	queue=[0]  
 	visit=set([0])  
@@ -18,7 +18,7 @@ def bfs(self,graph):
 		    queue.append(t)  
 		    visit.add(t)  
 	return edges  
-···
+```
 部分topo:  
 .<img src="https://github.com/smartysl/SDN/blob/master/SDNpic/%E6%8D%95%E8%8E%B72.PNG" width="300" height="100" />
 ## 最短路径规划
